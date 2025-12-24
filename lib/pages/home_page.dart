@@ -92,34 +92,34 @@ class HomePage extends StatelessWidget {
                     ),
 
                     // Show more button
-                    Obx(
-                      () =>
-                          controller.reachedEnd.value && controller.hasMoreData
-                          ? Padding(
-                              padding: const EdgeInsets.symmetric(vertical: 12),
-                              child: ElevatedButton(
-                                style: ElevatedButton.styleFrom(
-                                  backgroundColor: Colors.blue[800],
-                                  padding: const EdgeInsets.symmetric(
-                                    horizontal: 24,
-                                    vertical: 12,
-                                  ),
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(8),
-                                  ),
-                                ),
-                                onPressed: controller.loadMore,
-                                child: Text(
-                                  'Show More (${controller.displayedComments.length} of ${controller.allComments.length})',
-                                  style: const TextStyle(
-                                    fontSize: 16,
-                                    color: Colors.white,
-                                  ),
-                                ),
-                              ),
-                            )
-                          : const SizedBox.shrink(),
-                    ),
+                    // Obx(
+                    //   () =>
+                    //       controller.reachedEnd.value && controller.hasMoreData
+                    //       ? Padding(
+                    //           padding: const EdgeInsets.symmetric(vertical: 12),
+                    //           child: ElevatedButton(
+                    //             style: ElevatedButton.styleFrom(
+                    //               backgroundColor: Colors.blue[800],
+                    //               padding: const EdgeInsets.symmetric(
+                    //                 horizontal: 24,
+                    //                 vertical: 12,
+                    //               ),
+                    //               shape: RoundedRectangleBorder(
+                    //                 borderRadius: BorderRadius.circular(8),
+                    //               ),
+                    //             ),
+                    //             onPressed: controller.loadMore,
+                    //             child: Text(
+                    //               'Show More (${controller.displayedComments.length} of ${controller.allComments.length})',
+                    //               style: const TextStyle(
+                    //                 fontSize: 16,
+                    //                 color: Colors.white,
+                    //               ),
+                    //             ),
+                    //           ),
+                    //         )
+                    //       : const SizedBox.shrink(),
+                    // ),
                   ],
                 ),
               ),

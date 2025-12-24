@@ -30,17 +30,17 @@ class CommentController extends GetxController {
     fetchComments();
   }
 
- void _onScroll() {
-  if (gridScrollController.position.pixels >=
-      gridScrollController.position.maxScrollExtent) {
-    // reached bottom
-    if (!reachedEnd.value) reachedEnd.value = true;
-  } else {
-    // scrolled up
-    if (reachedEnd.value) reachedEnd.value = false;
+  void _onScroll() {
+    if (gridScrollController.position.pixels >=
+        gridScrollController.position.maxScrollExtent) {
+      // reached bottom
+      loadMore();
+      if (!reachedEnd.value) reachedEnd.value = true;
+    } else {
+      // scrolled up
+      if (reachedEnd.value) reachedEnd.value = false;
+    }
   }
-}
-
 
   Future<void> fetchComments() async {
     isLoading.value = true;
