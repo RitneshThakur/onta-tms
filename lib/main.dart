@@ -1,4 +1,5 @@
-import 'package:desktop_test/pages/home_page.dart';
+import 'package:desktop_test/pages/query_page.dart';
+import 'package:desktop_test/tables/table_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(primarySwatch: Colors.blue),
-      home:  HomePage(),
+      home: QueryPage(),
     );
   }
 }
